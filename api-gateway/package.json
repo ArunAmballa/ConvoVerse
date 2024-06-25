@@ -1,11 +1,12 @@
 {
-  "name": "server",
+  "name": "api-gateway",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"nodemon index.js",
+    "start":"node index.js"
   },
   "keywords": [],
   "author": "",
@@ -14,9 +15,7 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "ioredis": "^5.4.1",
-    "mongoose": "^8.4.3",
-    "socket.io": "^4.7.5"
+    "http-proxy-middleware": "^3.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"

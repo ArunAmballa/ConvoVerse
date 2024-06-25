@@ -1,0 +1,46 @@
+version: '3.8'
+
+
+services:
+ server:
+   image: arunamballa/server:lts
+   build:
+     context: ./server # Path to the backend Dockerfile
+   ports:
+     - "8080:8080"
+
+
+ server2:
+   image: arunamballa/server2:lts
+   build:
+     context: ./server # Path to the backend Dockerfile
+   ports:
+     - "8082:8080"
+
+
+ auth-server:
+   image: arunamballa/auth-server:lts
+   build:
+     context: ./auth-server # Path to the backend Dockerfile
+   ports:
+     - "8081:8081" 
+
+
+ client:
+   image: arunamballa/client:lts
+   build:
+     context: ./client # Path to the frontend Dockerfile
+   ports:
+     - "3000:3000"
+   depends_on:
+     - server # Wait for backend service to be ready before starting frontend
+
+
+ client2:
+   image: arunamballa/client2:lts
+   build:
+     context: ./client_2 # Path to the frontend Dockerfile
+   ports:
+     - "3001:3000"
+   depends_on:
+     - server # Wait for backend service to be ready before starting frontend
