@@ -1,7 +1,9 @@
+"use client"
 import {create} from "zustand";
 
+
 export const useAuthStore = create((set) => ({
-    authName: '',
+    authName:" ",
     updateAuthName: (name) => set({authName: name})
  }))
  

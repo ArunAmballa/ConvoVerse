@@ -35,10 +35,10 @@ const signup=async(req,res)=>{
         const userResponse=await User.create({username,password:hashedPassword});
         console.log(userResponse);
 
-        const token=generateJWT(userResponse._id);
+        const token=generateJWT(userResponse._id,username);
 
         const options={
-            maxAge: 15*24*60*60*1000, //miliseconds
+            maxAge: 1*24*60*60*1000, //miliseconds
             httpOnly: true,
             sameSite:"strict",
             secure: false

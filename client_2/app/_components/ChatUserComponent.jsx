@@ -17,7 +17,7 @@ export default function ChatUserComponent(){
     useEffect(() => {
 
         const getMsgs = async () => {
-            const response = await axios.get(`${process.env.NEXT_PUBLIC_BE_HOST}:8080/msgs`,
+            const response = await axios.get("http://localhost:8082/msgs",//`${process.env.NEXT_PUBLIC_BE_HOST}:8080/msgs`,
                 {
                     params: {
                         'sender': authName,
@@ -48,9 +48,15 @@ export default function ChatUserComponent(){
 
             {
 
-                users.length>0 && users.map((user,index)=>(<div key={index} onClick={()=>updateChatReceiver(user.username)} className='bg-slate-400 rounded-xl m-3 p-5'>
-                    {user.username}
-                    </div>))
+                users.length>0 && users.map((user,index)=>(
+                
+                        <div key={index} onClick={()=>updateChatReceiver(user.username)} className='bg-slate-400 h-10  font-serif font-medium  rounded-lg text-left px-7 '>
+                            {user.username}
+                            </div>
+                   
+             
+                ))
+
             }
 
         </div>

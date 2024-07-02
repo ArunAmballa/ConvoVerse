@@ -1,10 +1,11 @@
-import Image from "next/image";
-import SignUpComponent from "./_components/SignUpComponent.jsx";
+"use client"
+import Image from "next/image.js";
+import LoginComponent from "./_components/LoginComponent.jsx";
 
 export default function Home() {
   return (
     <div>  
-         <SignUpComponent></SignUpComponent>
+        <LoginComponent></LoginComponent>
     </div>
   );
 }

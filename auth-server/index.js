@@ -5,6 +5,7 @@ import connectDB from "./db/database.js";
 import router from "./routes/user.route.js";
 import cors from "cors";
 import { getAllUSers } from "./controllers/getAllUsers.js";
+import verifyToken from "./utils/verifyToken.js";
 
 
 
@@ -16,13 +17,13 @@ app.use(express.json())
 app.use(cookieParser());
 app.use(cors({
     credentials: true,
-    origin: [`${process.env.BE_HOST}:3000`, `${process.env.BE_HOST}:3001`]
+    origin: "http://localhost:3000"//`${process.env.BE_HOST}:3000`, `${process.env.BE_HOST}:3001`]
    }));
   
 
 
 app.use("/auth",router)
-app.use("/users",getAllUSers)
+app.use("/users",verifyToken,getAllUSers)
 const PORT=process.env.PORT 
 
 app.get("/",(req,res)=>{

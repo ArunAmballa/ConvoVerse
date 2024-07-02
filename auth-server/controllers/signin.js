@@ -33,12 +33,12 @@ const signin=async(req,res)=>{
 
         if( await bcrypt.compare(password,user.password))
             {
-                const token=generateJWT(user._id);
+                const token=generateJWT(user._id,user.username);
 
 
                 
                 const options={
-                    maxAge: 15*24*60*60*1000, //miliseconds
+                    maxAge: 1*24*60*60*1000, //miliseconds
                     httpOnly: true,
                     sameSite:"strict",
                     secure: false
