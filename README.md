@@ -14,7 +14,8 @@
 
 
 <h1>Architecture</h1>
-![Screenshot 2024-07-10 at 9 02 57 PM](https://github.com/ArunAmballa/ConvoVerse/assets/53054775/52227f04-6f81-4c88-b4ce-719e25278dd2)
+
+![Screenshot 2024-07-10 at 9 02 57 PM](https://github.com/ArunAmballa/ConvoVerse/assets/53054775/6db451a0-8011-492e-862c-5f873661ca6b)
 
 <h1>UI</h1>
 <img width="1440" alt="Screenshot 2024-07-01 at 8 37 38 PM" src="https://github.com/ArunAmballa/ConvoVerse/assets/53054775/1907d609-9eae-4241-a8a3-6ab9b1781240">
