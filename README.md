@@ -1,12 +1,13 @@
 <h1>ConvoVerse</h1>
 <h1>Tech Stack</h1>
 <ul>
-  <li>Next.Js</li>
-  <li>Node.JS</li>
-  <li>Express.JS</li>
+  <li>Next.Js for Frontend</li>
+  <li>Node.JS for Backend</li>
+  <li>Express.JS for Backend</li>
+  <li>Zustand for State Management</li>
   <li>Redis as Pub Sub</li>
-  <li>WebSockets</li>
-  <li>JWT</li>
+  <li>WebSockets for Real Time Communication</li>
+  <li>JWT for Authentication and Authorization</li>
   <li>Aws ECS</li>
   <li>Aws ECR</li>
   
